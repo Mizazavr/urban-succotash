@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .profile-card {
+            background-color: #16213e;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .avatar {
+            width: 80px;
+            height: 80px;
+            background-color: #333;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .user-info {
+            flex-grow: 1;
+        }
+        .username {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .edit-profile {
+            background-color: #2a3a5a;
+            color: #888;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 14px;
+        }
+        .edit-profile::before {
+            content: "✏️";
+            margin-right: 5px;
+        }
+        .account-status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .status {
+            font-size: 12px;
+        }
+        .free {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .upgrade-btn {
+            background: linear-gradient(to right, #ff6b6b, #ff9ff3);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .rating-section {
+            background-color: #16213e;
+            padding: 15px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .trophy {
+            font-size: 24px;
+            color: #feca57;
+        }
+        .chart {
+            background-color: #16213e;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .chart-title {
+            margin-bottom: 10px;
+        }
+        .pie-chart {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #ff6b6b 0deg 45deg, 
+                #feca57 45deg 90deg, 
+                #48dbfb 90deg 135deg, 
+                #ff9ff3 135deg 180deg, 
+                #54a0ff 180deg 225deg, 
+                #5f27cd 225deg 270deg, 
+                #ff6b6b 270deg 315deg,
+                #1dd1a1 315deg 360deg
+            );
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile">
+                <div class="avatar"></div>
+                <div class="user-info">
+                    <div class="username">Имя пользователя</div>
+                    <a href="#" class="edit-profile">Edit Your Profile</a>
+                </div>
+            </div>
+            <div class="account-status">
+                <div>
+                    <div class="status">ACCOUNT STATUS</div>
+                    <div class="free">FREE</div>
+                </div>
+                <button class="upgrade-btn">Upgrade</button>
+            </div>
+        </div>
+        <div class="rating-section">
+            <span>Узнать свой рейтинг</span>
+            <span class="trophy">🏆</span>
+        </div>
+        <div class="chart">
+            <div class="chart-title">Статистика за неделю</div>
+            <div class="pie-chart"></div>
+        </div>
+        <div class="chart">
+            <div class="chart-title">Статистика за месяц</div>
+            <div class="pie-chart"></div>
+        </div>
+    </div>
+</body>
+</html>
